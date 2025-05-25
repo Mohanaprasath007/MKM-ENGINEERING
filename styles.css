@@ -1,0 +1,202 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 20px;
+  font-style: normal;
+}
+
+/* Header and navigation */
+header {
+  background-color: #2d2b46;
+  padding: 1rem 2rem;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  height: 60px;
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Burger menu for mobile */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Main content */
+main#content {
+  padding: 2rem;
+  background-color: #fff;
+  min-height: 60vh;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+/* Carousel styles */
+.carousel-container {
+  width: 100vw;
+  /* full screen width */
+  max-width: 100%;
+  /* prevents overflow */
+  height: auto;
+  background-color: #000;
+  /* optional, for contrast */
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide {
+  width: 100%;
+  text-align: center;
+  display: none;
+  padding: 20px 0;
+}
+
+.carousel-slide img {
+  width: max-content;
+  /* Set desired width */
+  height: 600px;
+  /* Set desired height */
+  object-fit: cover;
+  /* To keep aspect ratio and crop if needed */
+}
+
+main#content {
+  padding: 0;
+}
+
+
+.caption {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.fade {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-indicators span {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.carousel-indicators span.active {
+  opacity: 1;
+}
+
+.container-a {
+  background-color: aqua;
+  align-items: end;
+  padding: 20px;
+  margin: 10px;
+}
+
+.container-a ul li {
+  list-style: circle;
+  position: relative;
+  left: 50%;
+
+}
+
+.about {
+  line-height: 20px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
